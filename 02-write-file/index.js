@@ -21,3 +21,8 @@ readLine.on('SIGINT', () => {
   stdout.write('Bye-bye!');
   process.exit();
 });
+
+process.on('SIGINT', () => {
+  stdout.write('\nYour text is NOT saved! Bye-bye!');
+  process.exit();
+});
